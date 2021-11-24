@@ -1,11 +1,11 @@
 <template>
-  <section>
+  <section id="footer-shop">
     <div class="cards">
       <div class="card" v-for="card in cards" :key="card.text">
 
-        <img :src="'../../assets/img/' + card.image" :alt="card.text">
+        <img :src="require(`../../assets/img/${card.image}`)" :alt="card.text">
 
-        <h3>{{ card.text }}</h3>
+        <div>{{ card.text }}</div>
 
       </div>
     </div>
@@ -20,7 +20,7 @@ export default {
       cards:[
         {
           "text": "Digital Comics",
-          "image":"buy-comics-digital-comics.png"
+          "image": "buy-comics-digital-comics.png"
         },
         {
           "text": "DC Merchandise",
@@ -38,10 +38,9 @@ export default {
           "text": "DC Power Visa",
           "image": "buy-comics-dc-power-visa.svg"
         },
-        
       ]
     }
-  }
+  },
 }
 </script>
 
@@ -52,6 +51,25 @@ export default {
     background-color: #0282f9;
     color: white;
     padding: 50px 0;
+
+    .cards{
+      width: 70%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+
+      .card{
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+        width: 100%;
+
+        img{
+          height: 70px;
+          max-width: 70px;
+        }
+      }
+    }
   }
     
 </style>
