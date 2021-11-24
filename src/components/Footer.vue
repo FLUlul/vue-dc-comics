@@ -1,69 +1,23 @@
 <template>
   <footer>
-    
+    <FooterShop/>
+    <FooterNav/>
+    <FooterSocials/>
   </footer>
 </template>
 
 <script>
+import FooterShop from '@/components/sub/FooterShop.vue'
+import FooterNav from '@/components/sub/FooterNav.vue'
+import FooterSocials from '@/components/sub/FooterSocials.vue'
+
 export default {
   name: 'Footer',
-  data(){
-    return{
-      links:[
-        {
-          "text": "Characters",
-          "url": "#",
-          "active": false
-        },
-        {
-          "text": "Comics",
-          "url": "#",
-          "active": false
-        },
-        {
-          "text": "Movies",
-          "url": "#",
-          "active": false
-        },
-        {
-          "text": "TV",
-          "url": "#",
-          "active": false
-        },
-        {
-          "text": "Games",
-          "url": "#",
-          "active": false
-        },
-        {
-          "text": "Collectibles",
-          "url": "#",
-          "active": false
-        },
-        {
-          "text": "Videos",
-          "url": "#",
-          "active": false
-        },
-        {
-          "text": "Fans",
-          "url": "#",
-          "active": false
-        },
-        {
-          "text": "News",
-          "url": "#",
-          "active": false
-        },
-        {
-          "text": "Shop",
-          "url": "#",
-          "active": false
-        },
-        
-      ]
-    }
-  }
+  components: {
+    FooterShop,
+    FooterNav,
+    FooterSocials
+  },
 }
 </script>
 
