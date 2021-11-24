@@ -1,28 +1,14 @@
 <template>
-  <header>
-    
-    <div class="logo">
-      <img src="../assets/img/dc-logo.png" alt="">
-    </div>
-
-    <nav>
-
-      <ul>
-
-        <li v-for="link, i in links" :key="i">
-          <a :href="link.url" :class="link.active ? 'active' : ''">{{ link.text }}</a>
-        </li>
-
-      </ul>
-
-    </nav>
-
-  </header>
+  <section>
+      <div>
+            <h1>Content goes here</h1>
+      </div>
+  </section>
 </template>
 
 <script>
 export default {
-  name: 'Header',
+  name: 'Content',
   data(){
     return{
       links:[
@@ -34,7 +20,7 @@ export default {
         {
           "text": "Comics",
           "url": "#",
-          "active": true
+          "active": false
         },
         {
           "text": "Movies",
@@ -85,40 +71,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  header{
-    width: 70%;
-    margin: auto;
-    height: 150px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .logo{
-      width: 80px;
-
-      img{
-        max-width: 100%;
-      }
-    }
-
-    nav li{
-      display: inline-block;
-
-      a{
-        margin: 0 20px;
-        text-decoration: none;
-        color: #1c1c1c;
-        padding-bottom: 60px;
-
-        &.active{
-          color: #0282f9;
-          border-bottom: solid 5px #0282f9;
+    section{
+        background-color: #1c1c1c;
+        color: white;
+        padding: 50px 0;
+        div{
+            width: 70%;
+            margin: auto;
         }
-
-        &:hover{
-          border-bottom: solid 5px #0282f978;
-        }
-      }
     }
-  }
+    
 </style>
