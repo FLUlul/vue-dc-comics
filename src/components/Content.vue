@@ -6,19 +6,21 @@
           <h2>CURRENT SERIES</h2>
         </div>
 
-        <!-- <ContentComics 
-          v-for="comic, i in comics" 
-          :key="i"
-          :arguments="comic"
-        /> -->
+
         <div class="cards-container">
 
           <ContentComics 
             v-for="comic, i in comics" 
             :key="i"
+            :arguments="comic"
+          />
+
+          <!-- <ContentComics 
+            v-for="comic, i in comics" 
+            :key="i"
             :img="comic.thumb"
             :series="comic.series"
-          />
+          /> -->
 
         </div>
 
@@ -125,7 +127,6 @@ export default {
         .container{
             width: 70%;
             margin: auto;
-
             position: relative;
 
             .title{

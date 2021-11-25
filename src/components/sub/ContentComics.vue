@@ -2,10 +2,16 @@
     <div class="comic">
 
         <div class="img-container">
+            <img :src="arguments.img" :alt="arguments.series">
+        </div>
+
+        <div class="text">{{ arguments.series }}</div>
+
+        <!-- <div class="img-container">
             <img :src="img" :alt="series">
         </div>
 
-        <div class="text">{{ series }}</div>
+        <div class="text">{{ series }}</div> -->
 
     </div>
 </template>
@@ -14,9 +20,9 @@
 export default {
   name: 'ContentComics',
   props:{
-      /* arguments: Object */
-      img: String,
-      series: String
+      arguments: Object
+      /* img: String,
+      series: String */
   }
 }
 </script>
