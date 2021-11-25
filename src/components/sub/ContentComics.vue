@@ -2,10 +2,10 @@
     <div class="comic">
 
         <div class="img-container">
-            <img :src="arguments.img" :alt="arguments.series">
+            <img :src="details.thumb" :alt="details.series">
         </div>
 
-        <div class="text">{{ arguments.series }}</div>
+        <div class="text">{{ details.series }}</div>
 
         <!-- <div class="img-container">
             <img :src="img" :alt="series">
@@ -20,7 +20,7 @@
 export default {
   name: 'ContentComics',
   props:{
-      arguments: Object
+      details: Object
       /* img: String,
       series: String */
   }

@@ -1,30 +1,35 @@
 <template>
   <section>
-      <div class="container">
 
-        <div class="title">
-          <h2>CURRENT SERIES</h2>
-        </div>
+    <div class="jumbo">
+
+    </div>
+
+    <div class="container">
+
+      <div class="title">
+        <h2>CURRENT SERIES</h2>
+      </div>
 
 
-        <div class="cards-container">
+      <div class="cards-container">
 
-          <ContentComics 
-            v-for="comic, i in comics" 
-            :key="i"
-            :arguments="comic"
-          />
+        <ContentComics 
+          v-for="comic, i in comics" 
+          :key="i"
+          :details="comic"
+        />
 
-          <!-- <ContentComics 
-            v-for="comic, i in comics" 
-            :key="i"
-            :img="comic.thumb"
-            :series="comic.series"
-          /> -->
-
-        </div>
+        <!-- <ContentComics 
+          v-for="comic, i in comics" 
+          :key="i"
+          :img="comic.thumb"
+          :series="comic.series"
+        /> -->
 
       </div>
+
+    </div>
   </section>
 </template>
 
@@ -123,6 +128,11 @@ export default {
     section{
         background-color: #1c1c1c;
         color: white;
+
+        .jumbo{
+          background-image: url("../assets/img/jumbotron.jpg");
+          height: 400px;
+        }
 
         .container{
             width: 70%;
