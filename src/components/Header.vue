@@ -101,22 +101,25 @@ export default {
       }
     }
 
-    nav li{
-      display: inline-block;
+    nav{
+    
+      li{
+        display: inline-block;
 
-      a{
-        margin: 0 20px;
-        text-decoration: none;
-        color: #1c1c1c;
-        padding-bottom: 60px;
+        a{
+          margin: 0 20px;
+          text-decoration: none;
+          color: #1c1c1c;
+          padding-bottom: 60px;
 
-        &.active{
-          color: #0282f9;
-          border-bottom: solid 5px #0282f9;
-        }
+          &.active{
+            color: #0282f9;
+            border-bottom: solid 5px #0282f9;
+          }
 
-        &:hover{
-          border-bottom: solid 5px #0282f978;
+          &:hover{
+            border-bottom: solid 5px #0282f978;
+          }
         }
       }
     }

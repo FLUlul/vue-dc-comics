@@ -13,8 +13,9 @@
 
         <div class="logo-socials">
 
-          <!-- <img :src="require(`../../assets/img/${social.logo}`)" alt=""> -->
-          <img :src="require(`../../assets/img/footer-facebook.png`)" alt="" v-for="social, i in socials" :key="i">
+          <img  :src="require(`../../assets/img/${social.logo}`)" alt=""  v-for="(social, i) in socials" :key="i">
+          
+          <!-- <img :src="require(`../../assets/img/footer-facebook.png`)" alt="" v-for="social, i in socials" :key="i"> -->
           <!-- <p>{{ social.logo }}</p> -->
     
         </div>
@@ -45,11 +46,11 @@ export default {
           "url": "#"
         },
         {
-          "logo": "footer-periscope.png",
+          "logo": "footer-pinterest.png",
           "url": "#"
         },
         {
-          "text": "footer-pintrest.png",
+          "logo": "footer-periscope.png",
           "url": "#"
         }
       ]
@@ -78,6 +79,10 @@ export default {
           text-decoration: none;
           color: white;
 
+          &:hover{
+            background: #0282f9;
+            border: solid white 3px;
+          }
         }
       }
 
