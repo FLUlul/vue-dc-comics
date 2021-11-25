@@ -171,7 +171,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-    section{
+    #footer-nav{
       background-image: url("../../assets/img/footer-bg.jpg");
       background-position: center;
       background-size: cover;
@@ -185,17 +185,23 @@ export default {
 
         .nav-container{
           display: flex;
-          justify-content: space-evenly;
           width: 50%;
 
           h3{
             color: white;
+            margin-right:20px;
           }
 
-          li{
-            color: #838383;
-            list-style: none;
+          ul{
+            margin-right:20px;
+            margin-top: 10px;
+            li{
+              color: #838383;
+              list-style: none;
+              margin: 5px 0;
+            }
           }
+
 
           #shop{
             margin-top: 20px;
